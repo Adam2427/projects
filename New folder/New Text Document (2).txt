@@ -1,0 +1,39 @@
+install node and npm
+npm install ember@cli
+ember new my-app
+
+cd my-app
+
+ember serve
+
+create jsconfig json file to compile es2015,experimental decoders true, exclude nodemodules,dist
+
+-----install scss----------
+ember install ember-cli-sass 
+ember-cli-build.js to change sassOptions to extension ---scss
+
+----routepage-----
+create a route and edit the hbs page
+
+--TYPE1--
+--basic route--
+to create a route: ember g route names
+destory          : ember destory route names    
+        
+--nested route--
+ember g route names/name
+
+--index route--
+ember g route names/index
+
+--TYPE 2--
+
+---dynamic route----
+ember g route item
+route item,{path: '/item/:item_id'}
+item.js to create a model(params) to store const {item_id}=params; and return item_id;
+last step is item.hbs to bind {{this.model}}
+
+---not found route(while card)----
+ember g route not-found
+route not-found {path:"/*path"}

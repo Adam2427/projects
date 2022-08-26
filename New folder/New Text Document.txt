@@ -1,0 +1,3 @@
+Developing a Shopping Cart Application using Angular - 13, and this Project covers all fundamentals
+of Angular Multiple Modules, Components, Template and Data Binding, Form Validation, HttpClient,
+Dependency Injection , Routing and Navigation, Service Workers, Guard , etc...,

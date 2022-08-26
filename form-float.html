@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form-float</title>
+    <link rel="stylesheet" href="form-float.css" />
+    <style>
+      .container {
+        border: 1px solid #b2c5c0;
+      }
+      .name {
+        margin: 5px 0;
+        padding: 10px;
+      }
+      .name-label {
+        float: left;
+        width: 220px;
+      }
+
+      .name input {
+        margin-left: 4px;
+        padding: 8px;
+
+        width: 164px;
+        height: 35px;
+        border: 1px solid #b2c5c0;
+        border-radius: 5px;
+      }
+      .name label {
+        font-size: medium;
+        font-style: normal;
+        font-family: "Open Sans", Arial, Arimo, Helvetica, sans-serif;
+        font-size: 15px;
+
+        color: #252525;
+        font-weight: medium;
+      }
+      span {
+        color: red;
+      }
+      .email input {
+        width: 223px;
+      }
+      textarea {
+        border: 1px solid #b2c5c0;
+        border-radius: 5px;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Complaints</h1>
+        <h4>Help us improve our service.</h4>
+      </header>
+      <!-- <div>
+        <div class="container-left">
+          <label for="">Full name *</label>
+          <label for="">Email *</label><br />
+          <label for="">Phone</label><br />
+          <label for="">Where did we go wrong? *</label>
+        </div>
+        <div class="container-right">
+          <input type="text" placeholder="First" />&nbsp;
+          <input type="text" placeholder="Last" /><br />
+          <input class="input-3" type="text" /><br />
+          <input class="input-3" type="text" /><br />
+          <textarea></textarea>
+        </div>
+      </div>
+      <footer>
+        <button>Submit</button>
+      </footer> -->
+      <div class="name">
+        <div class="name-label">
+          <label>Full name <span>*</span></label>
+        </div>
+        <div class="name-input">
+          <input type="text" name="" id="" placeholder="First" />
+          <input type="text" name="" id="" placeholder="Last" />
+        </div>
+      </div>
+      <div class="name email">
+        <div class="name-label">
+          <label>Email <span>*</span></label>
+        </div>
+        <div class="name-input">
+          <input type="text" name="" id="" />
+        </div>
+      </div>
+      <div class="name email">
+        <div class="name-label">
+          <label>Phone <span>*</span></label>
+        </div>
+        <div class="name-input">
+          <input type="text" name="" id="" />
+        </div>
+      </div>
+      <div class="name email">
+        <div class="name-label">
+          <label>Where did we go wrong? <span>*</span></label>
+        </div>
+        <div class="name-input">
+          <textarea name="" id=""></textarea>
+        </div>
+      </div>
+      <footer>
+        <button>Submit</button>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+JAVASCRIPT
+---script or interpeted language
+is a line by line 0r each and every line complie and excution
+---programming language-
+-is entire line complie and excution..
+DOM---document object model-well defined structure page change the styles.
+variable- temperary storage 
+---data types string,number,boolean,undefined,null
+undefined is not defined;
+null is like undefined but type of null is object;
+
+--------------
+type conversion
+
+string to Number = Number()
+Number to string = String()
+--
+type corecion
+
+" am" +23 + "Years old"= am 23 Years old 
+--the number of 23 type is change into String '23'
+
+"23" - "10" - 3 = 10;
+"23" is type String to change type number
+this method (+) operators its not working
+let n='1'+1; ans=11;
+n=n-1; ans =10;
+
+2+3+4+'5'=95; //2+3+4=9+'5'=95 its concating//

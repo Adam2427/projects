@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+
+        margin-top: 0;
+      }
+
+      .logo {
+        width: 70px;
+        height: 25px;
+        margin-top: 5px;
+      }
+      .f-logo {
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        float: right;
+        margin-right: 20px;
+        margin-top: 0;
+      }
+      header {
+        background-color: rgb(243, 243, 243);
+        height: 37px;
+      }
+
+      .frm {
+        font-size: 34px;
+        font-weight: 500;
+        line-height: 48px;
+        margin: 0 0 0 12px;
+        vertical-align: top;
+      }
+      /* h2 {
+        font-size: 32px;
+      } */
+      button {
+        background-color: rgb(255, 86, 86);
+        padding: 0 40px;
+        color: aliceblue;
+        font-size: medium;
+        font-weight: bold;
+        height: 50px;
+        line-height: 50px;
+        border: none;
+        cursor: pointer;
+      }
+      p,
+      a {
+        text-decoration: none;
+        line-height: 1.8;
+        font-size: 20px;
+      }
+      p a {
+        color: #03a9f5;
+      }
+      .form-container {
+        /* margin: 0 160px; */
+        padding: 120px 40px 90px;
+        float: left;
+      }
+      .container-left {
+        width: 400px;
+        float: left;
+        padding: 90px 40px 70px;
+      }
+      .author {
+        font-size: 20px;
+        font-weight: 100;
+        color: #0279af;
+        text-transform: uppercase;
+        font-family: serif, Arial, Helvetica, sans-serif;
+      }
+      .author-qut {
+        font-family: serif, Arial, Helvetica, sans-serif;
+      }
+      .author-img {
+        border-radius: 50%;
+        height: 70px;
+        width: 70px;
+      }
+      .container-right {
+        width: 450px;
+        float: left;
+        padding: 90px 40px 90px;
+      }
+      input {
+        width: 300px;
+        height: 35px;
+        font-size: 15px;
+      }
+      .ckbox {
+        height: 15px;
+        width: 20px;
+      }
+      form button {
+        width: 300px;
+        padding: 0 50px;
+        font-size: medium;
+      }
+      footer {
+        clear: both;
+        text-align: center;
+        background-color: rgb(204, 243, 243);
+      }
+      footer p {
+        margin-bottom: 0;
+      }
+      /* body {
+        margin-bottom: 0;
+      } */
+      .form-font {
+        font-size: 20px;
+        margin-top: 15px;
+        vertical-align: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span>
+        <img class="logo" src="zoho-logo.png" alt="" />
+      </span>
+      <span class="form-font">Forms</span>
+      <span>
+        <img class="f-logo" src="pranesh-studio31.jpg" alt="" />
+      </span>
+    </header>
+    <div class="container">
+      <div class="container-left">
+        <center>
+          <img src="pranesh-studio31.jpg" class="author-img" />
+        </center>
+        <br />
+        <p class="author-qut">
+          "Zoho Forms made our everyday tasks smoother with its easy-to-use UI
+          and brilliant form customization options. It's fun to work with and
+          has become an integral part of our business."
+        </p>
+        <p class="author">Pranesh Padmanabhan, CEO, Studio 31</p>
+      </div>
+      <div class="form-container">
+        <center>
+          <span>
+            <img src="forms-icon.png" alt="" width="44px" height="44px" />
+          </span>
+          <span class="frm"> Forms</span>
+          <h1>Log in to access Zoho Forms.</h1>
+          <button>SIGN IN</button><br /><br />
+          <p>Don't have a Zoho account? <a href="#">Sign Up Now</a></p>
+        </center>
+      </div>
+      <div class="container-right">
+        <h2>Get your free account now.</h2>
+        <form>
+          <input type="text" placeholder="Company Name" required /><br /><br />
+          <input type="text" placeholder="Email" required /><br /><br />
+          <input type="text" placeholder="Password" required /><br /><br />
+          <input
+            type="text"
+            placeholder="Phone number (Optional)"
+            required
+          /><br /><br />
+          <input class="ckbox" type="checkbox" id="ckbox" required />
+          <label for="ckbox">
+            I agree to the Terms of Service and Privacy Policy.</label
+          ><br /><br />
+          <button type="submit">SIGN UP FOR FREE</button>
+          <!-- <p>adfadf adfsdfasfa dsfdas</p> -->
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <p class="footer">
+        © 2022, Zoho Corporation Pvt. Ltd. All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>

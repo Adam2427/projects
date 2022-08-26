@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <style>
+      * {
+        width: 800px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        height: 35px;
+        padding: 10px 18px;
+        font-family: Serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      header {
+        background-color: #2dbaa6;
+        padding: 0;
+      }
+
+      .name,
+      .main-container {
+        padding: 10px;
+      }
+      .container {
+        border: 1px solid #e5e5e5;
+      }
+      span {
+        font-size: 17px;
+        color: #444;
+      }
+      .name {
+        margin: 5px 0;
+      }
+      footer {
+        padding: 30px;
+      }
+      button {
+        background-color: #2dbaa6;
+        color: #fff;
+        padding: 5px 15px;
+        border: none;
+        width: 80px;
+        font-size: 15px;
+      }
+      input {
+        margin-top: 8px;
+        width: 280px;
+        height: 30px;
+        padding: 5px;
+        box-sizing: border-box;
+        border: 1px solid #e5e5e5;
+      }
+      .sub-text {
+        padding-top: 8px;
+        font-size: 12px;
+        color: #9d9a9a;
+        margin-left: 3px;
+        font-family: sans-serif;
+        font-style: normal;
+      }
+      .sub-text:last-child {
+        margin-left: 265px;
+      }
+      .email input {
+        width: 380px;
+      }
+      .textarea input {
+        height: 75px;
+        width: 760px;
+      }
+    </style>
+  </head>
+  <body>
+    <br /><br /><br /><br />
+    <div class="container">
+      <header>
+        <h1>Contact Us</h1>
+      </header>
+      <div class="main-container">
+        <div class="name">
+          <span>Full name * </span><br />
+          <input type="text" />&nbsp;&nbsp; <input type="text" /><br />
+          <span class="sub-text">First</span>
+          <span class="sub-text">Last</span>
+        </div>
+        <div class="email name">
+          <span>Email * </span><br />
+          <input type="text" />
+        </div>
+        <div class="textarea name">
+          <span>Leave us a few words * </span><br />
+          <input type="text" />
+        </div>
+      </div>
+
+      <footer>
+        <center><button>Submit</button></center>
+      </footer>
+    </div>
+  </body>
+</html>

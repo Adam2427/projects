@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+      }
+      .box-1 {
+        background-color: red;
+      }
+      .box-1 {
+        background-color: blue;
+      }
+      .box-3 {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <div class="box box-1"></div>
+      <div class="box box-2"></div>
+      <div class="box box-3"></div>
+      <button>back</button>
+      <button class="next">next</button>
+    </div>
+  </body>
+  <script>
+    const btnNext = document.querySelector(".next");
+    const showBox = document.querySelectorAll(".box");
+    btnNext.addEventListener("click", () => {
+      for (let i = 0; i < showBox.length; i++) {
+        showBox[i];
+      }
+    });
+  </script>
+</html>

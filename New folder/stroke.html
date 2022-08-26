@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        height: 300vh;
+      }
+      .cont {
+        height: 200vh;
+      }
+      .container {
+        position: relative;
+        display: none;
+      }
+      .stroke {
+        transform: rotate(-115deg);
+      }
+      .path {
+        stroke-width: 2;
+        stroke: #1e1935;
+        stroke-linecap: round;
+        fill: none;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: path 5s ease forwards;
+      }
+      /* .path-anim {
+        animation: path 5s ease forwards;
+      } */
+
+      @keyframes path {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      .rocket-img {
+        width: 120px;
+
+        position: absolute;
+        top: 88px;
+        left: 138px;
+        transition: 1s;
+
+        opacity: 0;
+        animation: rocket 1s 1.2s ease forwards;
+      }
+      /* .rock-anim {
+        animation: rocket 1s 1.2s ease forwards;
+      } */
+
+      @keyframes rocket {
+        from {
+          transform: translate(-40px, 40px);
+          opacity: 1;
+        }
+        to {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+      }
+      svg::before {
+        content: "";
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <svg
+        class="sync-tick"
+        width="16px"
+        height="16px"
+        viewBox="0 0 245 173"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <g
+          id="Page-1"
+          stroke="none"
+          stroke-width="5"
+          fill="none"
+          fill-rule="evenodd"
+          stroke-opacity="1"
+        >
+          <polyline
+            id="tickmark"
+            stroke="#6AA121"
+            stroke-width="40"
+            points="5.640625 83.7607422 83.2539062 161.663086 238.97168 6.11328125"
+          ></polyline>
+        </g>
+      </svg>
+    </div>
+    <div class="container">
+      <img
+        class="rocket-img"
+        src="../assets/create-edit-share-rocket.png"
+        alt=""
+      />
+      <svg class="stroke" width="600" height="600">
+        <path
+          class="path"
+          id="curve"
+          d="M100,250 C100,40 500,40 520,250"
+        ></path>
+      </svg>
+    </div>
+  </body>
+  <script>
+    window.addEventListener("scroll", (e) => {
+      let curScroll = window.pageYOffset;
+      // console.log(e.target.className);
+      if (curScroll >= 600) {
+        document.querySelector(".container").style.display = "block";
+        // console.log(curScroll);
+        // document.querySelector(".path").classList.add("path-anim");
+        // document.querySelector(".rocket-img").classList.add("rock-anim");
+      }
+    });
+  </script>
+</html>

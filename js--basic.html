@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Basic</title>
+    <style></style>
+    <script>
+      let myVariable;
+      myVariable = "hallo";
+      console.log(myVariable);
+      myVariable = 00000;
+      console.log(myVariable);
+      myVariable = true;
+      console.log(myVariable);
+      myVariable = ["hallo", 0, "world", 22];
+      console.log(myVariable);
+      myVariable = { f: "hallo", l: "world", a: 44 };
+
+      console.log(myVariable);
+      //comment
+      //operators
+      let num;
+      num = 4 + 2;
+      num = "4" + 4;
+      num = 4 * 4;
+      num = 4 / 4;
+
+      console.log(num);
+      myVariable = 3;
+      console.log(myVariable !== 3);
+      let myIceCream = "chocolate";
+      // if (!myIceCream === "chocolate") {
+      //   alert("yay, I love chocolate ice cream!");
+      // } else {
+      //   alert("Awww,but chocolate is my favorite....");
+      // }
+
+      ////////////////////////////////////////////////
+      ////------ FUNCTIONS----------------------
+      ////fucntion declarisation or def of statement
+      function multiple(num1, num2) {
+        let result = num1 * num2;
+        return result;
+      }
+      console.log(multiple(5, 5));
+      console.log(multiple(15, 5));
+      console.log(multiple(51, 5));
+      console.log(multiple(25, 5));
+      document.write("halllloooooo.....");
+      document.write("<h1>HELLO WORLD</h1>");
+      function fun() {
+        document.write("fun Calling..");
+      }
+      fun();
+
+      function mult(num1, num2) {
+        let res = num1 * num2;
+        return res;
+      }
+      console.log(mult(2, 4));
+      ////////////////////////
+      //// funcion expression
+      const greet = function (a, b) {
+        return a * b;
+      };
+      console.log(greet(10, 10));
+      ////////////////////////
+      //// Arrow function
+      const doCall = (a, b, c) => a * b * c;
+      console.log(doCall(5, 5, 5));
+
+      (a, b) => console.log(a * b);
+      /////////////////////////////////////////////////////////
+      //DOCUMENT
+      document.write("<h1>Yeah..! it's Work..,</h1>");
+      let url = document.URL; //same window.location.href
+      console.log(url);
+      let title = document.title;
+      console.log(title);
+      //DOCUMENT.SCRIPT
+      let scriptLen = document.scripts.length; //how manly script tag using..
+      console.log(scriptLen);
+      let script = document.scripts[0].text; //text using without show functions but visibel //commend line also
+      //same document.scripts.item(0)/////show script tag inside elements..
+      // console.log(script);
+      //DOCUMENT.LINK also Image same
+      let Url = document.links.length; // a tag link length
+      Url = document.links[0]; //.href and
+      Url = document.links.item(0);
+      //DOCUMENT OPEN AND CLOSE
+      //1)open  or close page write some texts...and close it
+      function doOpen() {
+        document.open();
+        document.write("opened.......");
+        document.close();
+      }
+      //2. open new window....
+      function doOpenNew() {
+        let myWindow = window.open();
+        myWindow.document.open();
+        myWindow.document.write("New Page opened.......");
+        myWindow.document.close();
+      }
+      //Document.lastModified;
+      //last modified Date... //Like new Date();
+      let text = document.lastModified;
+      console.log(text);
+      //Document.hasFocus()
+      //click inside this  documnet to change hasFocus is True;
+      let textFocus = document.hasFocus();
+      if (textFocus) {
+        textFocus = "Yeah..!, FOCUS is Work...";
+      } else {
+        textFocus = "No..! Focus";
+      }
+      console.log(textFocus);
+      /////////
+      //ID
+    </script>
+  </head>
+  <body>
+    <!-- <p class="paragraph" id="para"></p>
+    <p class="example">COLOUR.</p>
+    <button onclick="doOpenNew()">Open</button>
+    <ul class="example">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul> -->
+  </body>
+  <script>
+    const para = document.querySelector("p");
+    para.addEventListener("click", updateName);
+    function updateName() {
+      let name = prompt("Enter a Name");
+      para.textContent = `Player 1: ${name}`;
+    }
+    /////////
+    //ID
+    document.getElementById("para").innerText = "Id Worked";
+    document.getElementById("para"); //or innerText
+    //class(elements)
+    document.getElementsByClassName("paragraph"); //elements !impt //class name without . Using
+    ///TagName(elements)
+    let list = document.getElementsByTagName("li");
+    console.log(list[0].innerHTML);
+    //Name (elements)
+    let uname = document.getElementsByName(""); //html name attribute...
+    ///Query
+    document.querySelector("#id");
+    document.querySelector(".class");
+    document.querySelector("tag");
+    // document.querySelectorAll();
+    const allClass = document.querySelectorAll(".example");
+    for (let i = 0; i < allClass.length; i++) {
+      allClass[i].style.color = "red";
+    }
+  </script>
+</html>

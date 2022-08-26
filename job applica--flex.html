@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>job Application flex</title>
+    <style>
+      * {
+        margin: 0 auto;
+      }
+      body {
+        width: 100%;
+        background-image: url("./images/Hnet.com-image.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /*
+
+        background-position: center;  */
+      }
+      .container {
+        width: 800px;
+        background-color: #fff;
+
+        border: 1px solid rgb(177, 175, 175);
+        /* margin-bottom: 20px; */
+        margin: 20px auto;
+      }
+      header {
+        padding: 10px 18px;
+        text-align: center;
+
+        margin: 0;
+        font-size: 32px;
+        background-color: #c0504d;
+        color: #fff;
+
+        font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+
+        font-style: normal;
+        font-weight: 700;
+      }
+      .main-container {
+        margin: 10px auto;
+        padding: 2px 10px;
+        padding-bottom: 0;
+      }
+      .h2 {
+        margin: 10px 10px;
+        padding: 10px;
+        padding-left: 0;
+
+        font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        color: #c0504d;
+        font-style: normal;
+        border-bottom: 1px dashed #ff704b;
+      }
+      /* .container-name {
+        margin: 5px auto;
+        padding: 0 10px;
+      } */
+
+      .fullname {
+        margin: 5px 0;
+        padding: 10px 10px;
+        display: inline-flex;
+      }
+      .fullname-label {
+        width: 258px;
+        /* flex-grow: 2; */
+      }
+      .fullname input,
+      .address input,
+      select,
+      textarea {
+        margin-left: 5px;
+        border: 1px solid #e5e5e5;
+        padding: 5px;
+        box-sizing: border-box;
+        width: 182px;
+        height: 30px;
+        opacity: 0.9;
+      }
+      .date input {
+        width: 247px;
+      }
+      .gender input {
+        width: auto;
+        border: #e1e1e1;
+      }
+      .gender-input label {
+        vertical-align: 10px;
+        font-weight: 200;
+        opacity: 0.9;
+      }
+      .education select {
+        width: 247px;
+        margin-left: 5px;
+      }
+      .resume input {
+        height: 75px;
+        width: 494px;
+        border-style: dashed;
+      }
+      .resume input:hover {
+        outline: 2px dashed #bebebe;
+      }
+
+      textarea {
+        width: 247px;
+        height: 74px;
+      }
+      footer {
+        padding: 25px;
+        text-align: center;
+      }
+      button {
+        width: 75px;
+        height: 31px;
+        background-color: #c0504d;
+        color: #fff;
+        border: none;
+        font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+        font-size: 18px;
+
+        font-style: normal;
+        font-weight: 400;
+
+        cursor: pointer;
+      }
+      select {
+        color: #807e7e;
+      }
+      input[type="text"]:focus {
+        outline: 1px solid #959595;
+      }
+      input[type="file"] {
+        padding: 27px;
+        padding-left: 190px;
+        color: #807e7e;
+      }
+
+      input[type="file"]::-webkit-file-upload-button {
+        display: none;
+      }
+      label {
+        font-size: medium;
+        font-style: normal;
+        font-family: "Open Sans", Arial, Arimo, Helvetica, sans-serif;
+        font-size: 13px;
+        margin-left: 0;
+
+        color: #444444;
+        font-weight: bold;
+      }
+      span {
+        color: red;
+      }
+      .clear-fix {
+        margin-top: 15px;
+      }
+      .address input,
+      select {
+        width: 237px;
+      }
+      .address input:first-child,
+      .address input:nth-child(2) {
+        width: 494px;
+        /* margin-bottom: 30px; */
+      }
+      /* .address input:nth-child(3) {
+        margin-bottom: 30px; 
+      }*/
+      .address .fullname-label {
+        flex-shrink: 0;
+      }
+      /* .address {
+              display: flex;
+            }
+            .address .fullname-label {
+              justify-self: stretch;
+            } */
+
+      /* .addr .address-input {
+        width: 237px;
+      } */
+      /* margin-right: 10px; */
+
+      /* .address-input-1 {
+              margin-right: 4px;
+            } */
+      /*.addr {
+        width: 500px;
+        justify-self: flex-end;
+       display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }*/
+
+      /* .addr {
+              display: flex;
+              flex-direction: column;
+
+              align-items: flex-end;
+            } */
+      /* .address {
+        display: flex;
+        margin: 5px auto;
+
+        
+
+        padding: 10px;
+      } */
+      /* .label {
+        flex: 0 0 258px;
+      } */
+      .address--1 {
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        row-gap: 30px;
+      }
+      /* .main-container {
+        display: inline-flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>Job Application</h2>
+      </header>
+      <div class="main-container">
+        <h2 class="h2">Personal Information</h2>
+
+        <!-- <form action="#"> -->
+        <div class="fullname clear-fix">
+          <div class="fullname-label">
+            <label>Full name <span>*</span></label>
+          </div>
+
+          <div>
+            <input type="text" placeholder="First" required />
+
+            <input type="text" placeholder="Last" required />
+          </div>
+        </div>
+        <div class="fullname date">
+          <div class="fullname-label">
+            <label>Date of Birth <span>*</span> </label>
+          </div>
+
+          <div>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="fullname gender">
+          <div class="fullname-label">
+            <label>Gender <span>*</span> </label>
+          </div>
+
+          <div class="gender-input">
+            <input type="radio" name="gender" value="male" id="gen" /><label
+              for="gen"
+            >
+              Male</label
+            >
+            <input type="radio" name="gender" value="female" id="gen1" /><label
+              for="gen1"
+            >
+              Female</label
+            >
+          </div>
+        </div>
+        <div class="fullname education">
+          <div class="fullname-label">
+            <label>Education </label>
+          </div>
+
+          <div>
+            <select>
+              <option value=""><label>-Select-</label></option>
+            </select>
+          </div>
+        </div>
+        <div class="fullname resume">
+          <div class="fullname-label">
+            <label>Resume <span>*</span></label>
+          </div>
+
+          <div class="fullname-input">
+            <input type="file" />
+          </div>
+        </div>
+        <div class="fullname address">
+          <div class="fullname-label">
+            <label>Address </label>
+          </div>
+
+          <div class="address--1">
+            <input type="text" placeholder="Street Address" />
+            <input type="text" placeholder="Address Line 2" />
+
+            <input type="text" placeholder="City" />
+            <input type="text" placeholder="State / Region / Province" />
+
+            <input type="text" placeholder="Postal / Zip Code" />
+            <select>
+              <option value=""><label>-Country-</label></option>
+            </select>
+          </div>
+        </div>
+        <div class="fullname date">
+          <div class="fullname-label">
+            <label>Email <span>*</span> </label>
+          </div>
+
+          <div>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="fullname date">
+          <div class="fullname-label">
+            <label>Phone </label>
+          </div>
+
+          <div>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="fullname date">
+          <div class="fullname-label">
+            <label>Leisure interests </label>
+          </div>
+
+          <div>
+            <textarea></textarea>
+          </div>
+        </div>
+        <h2 class="h2">Previous/Current Employment Details</h2>
+        <div class="fullname clear-fix date">
+          <div class="fullname-label">
+            <label>Company name </label>
+          </div>
+
+          <div>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="fullname date">
+          <div class="fullname-label">
+            <label>Date of joining </label>
+          </div>
+
+          <div>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="fullname date">
+          <div class="fullname-label">
+            <label>Date of leaving</label>
+          </div>
+
+          <div>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="fullname date">
+          <div class="fullname-label">
+            <label>Designation </label>
+          </div>
+
+          <div>
+            <input type="text" />
+          </div>
+        </div>
+        <h2 class="h2">Reference #1</h2>
+        <div class="fullname clear-fix">
+          <div class="fullname-label">
+            <label>Full name <span>*</span></label>
+          </div>
+
+          <div>
+            <input type="text" placeholder="First" />
+
+            <input type="text" placeholder="Last" />
+          </div>
+        </div>
+        <div class="fullname date">
+          <div class="fullname-label">
+            <label>Email <span>*</span> </label>
+          </div>
+
+          <div>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="fullname date">
+          <div class="fullname-label">
+            <label>Phone </label>
+          </div>
+
+          <div>
+            <input type="text" />
+          </div>
+        </div>
+        <h2 class="h2">Reference #2</h2>
+        <div class="fullname clear-fix">
+          <div class="fullname-label">
+            <label>Full name <span>*</span></label>
+          </div>
+
+          <div>
+            <input type="text" placeholder="First" />
+
+            <input type="text" placeholder="Last" />
+          </div>
+        </div>
+        <div class="fullname date">
+          <div class="fullname-label">
+            <label>Email <span>*</span> </label>
+          </div>
+
+          <div>
+            <input type="text" required />
+          </div>
+        </div>
+        <div class="fullname date">
+          <div class="fullname-label">
+            <label>Phone </label>
+          </div>
+
+          <div>
+            <input type="text" />
+          </div>
+        </div>
+        <footer>
+          <button>Apply</button>
+        </footer>
+        <!-- </form> -->
+      </div>
+    </div>
+  </body>
+</html>

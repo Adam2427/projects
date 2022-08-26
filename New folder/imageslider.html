@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 500px;
+        width: 500px;
+
+        background-image: url(../images/1.jpg);
+      }
+      .box {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <!-- <div class="boxes">
+      <div id="box-1" class="box">
+        <img src="../images/1.jpg" alt="" />
+      </div>
+      <div id="box-2" class="box">
+        <img src="../images/2.jpg" alt="" />
+      </div>
+      <div id="box-3" class="box">
+        <img src="../images/3.jpg" alt="" />
+      </div>
+    </div> -->
+    <button onclick="doBefore()">click me</button>
+    <button onclick="doAfter()">click me</button>
+  </body>
+  <script>
+    var i = 1;
+
+    function doAfter() {
+      let img = document.getElementById("box");
+
+      if (i < 3) {
+        i++;
+
+        img.style.backgroundImage = "Url(../images/" + i + ".jpg)";
+      } else {
+        i = 1;
+
+        img.style.backgroundImage = "Url(../images/" + i + ".jpg)";
+      }
+      // img.style.backgroundImage = "Url(../images/" + result + ".jpg)";
+    }
+    function doBefore() {
+      let img = document.getElementById("box");
+      i--;
+      if (i > 0) {
+        console.log(i);
+        img.style.backgroundImage = "Url(../images/" + i + ".jpg)";
+      } else {
+        i = 3;
+        console.log(i);
+        img.style.backgroundImage = "Url(../images/" + i + ".jpg)";
+      }
+    }
+  </script>
+  <!-- <script>
+    var i = 1;
+
+    function doAfter() {
+      let box1 = document.getElementById("box-1");
+      let box2 = document.getElementById("box-2");
+      let box3 = document.getElementById("box-3");
+    }
+    //   if (i < 3) {
+    //     i++;
+
+    //     box(i).style.display = "block";
+    //   } else {
+    //     i = 1;
+
+    //     img.style.backgroundImage = "Url(../images/" + i + ".jpg)";
+    //   }
+    //   // img.style.backgroundImage = "Url(../images/" + result + ".jpg)";
+    // }
+    // function doBefore() {
+    //   let img = document.getElementById("box");
+    //   i--;
+    //   if (i > 0) {
+    //     console.log(i);
+    //     img.style.backgroundImage = "Url(../images/" + i + ".jpg)";
+    //   } else {
+    //     i = 3;
+    //     console.log(i);
+    //     img.style.backgroundImage = "Url(../images/" + i + ".jpg)";
+    //   }
+    // }
+  </script> -->
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trail</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        margin-top: 300px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+      .box {
+        width: 420px;
+        height: 155px;
+        border: 5px solid;
+        border-color: #1e1935 #1e1935 transparent;
+        border-radius: 50%/ 150px 150px 0 0;
+        transform: rotate(-115deg);
+        position: absolute;
+
+        background-size: 100% 200%;
+
+        transition: 1s;
+        animation: fade 4s linear;
+        animation-fill-mode: forwards;
+      }
+      @keyframes fade {
+        100% {
+        }
+      }
+      .path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 5s linear;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 00;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="box"></div> -->
+      <!-- <svg height="200" width="200">
+        <circle cy="100" r="90" stroke="blue" stroke-width="5">
+          its not support svg
+        </circle>
+
+      </svg> -->
+      <!-- <svg height="100" width="300">
+        <g>
+          <line
+            x1="0"
+            y1="0"
+            x2="200"
+            y2="0"
+            stroke="black"
+            stroke-width="5"
+            stroke-dasharray="50"
+            stroke-dashoutset="0"
+          ></line>
+          <line
+            x1="0"
+            y1="20"
+            x2="200"
+            y2="20"
+            stroke="black"
+            stroke-width="5"
+            stroke-linegap="round"
+          ></line>
+        </g>
+      </svg>
+      <svg height="200" width="200">
+        <circle cx="100" cy="100" r="50" stroke="red" stroke-width="3"></circle>
+        <circle cx="0" cy="100" r="50" stroke="red" stroke-width="3"></circle>
+        <circle cx="200" cy="100" r="50" stroke="red" stroke-width="3"></circle>
+        <circle cx="100" cy="100" r="90"></circle>
+      </svg>
+      <svg height="200" width="200">
+        <rect x="0" y="20" height="100" width="200" stroke="red"></rect>
+        <rect x="50" y="50" height="100" width="200" stroke="red"></rect>
+
+        <ellipse
+          cx="100"
+          cy="100"
+          rx="100"
+          ry="30"
+          stroke="red"
+          fill="grey"
+          class="path"
+          stroke-width="20"
+        ></ellipse>
+      </svg> -->
+      <!-- <svg height="700" width="200">
+        <circle
+          cx="270"
+          cy="350"
+          r="250"
+          stroke="red"
+          fill="transparent"
+          class="curve"
+        ></circle>
+      </svg> -->
+      <svg height="500" width="500">
+        <!-- <polyline points="10,111 50,344 70,240" stroke="blue"></polyline> -->
+        <!-- <polygon></polygon> -->
+        <path
+          id="path"
+          d="M140,0 C150,10 300,10 200,40 S250,20 400,50 Q170,30 100,52 T150,10 Z"
+          fill="none"
+          stroke="red"
+        ></path>
+        <!-- <text>
+          <textpath href="#path">a asdjf;adfj df;asjdfjjasdlfjladsf</textpath>
+        </text> -->
+      </svg>
+      <img src="icons8-play-16.png" alt="" />
+    </div>
+  </body>
+  <script>
+    var username = "ggg";
+
+    function doCall() {
+      var userAge = 44;
+      alert("hallo " + username);
+    }
+    doCall();
+    console.log(userAge);
+  </script>
+</html>

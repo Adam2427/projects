@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "roboto", sans-serif;
+      }
+      body {
+        height: 200vh;
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        column-gap: 200px;
+      }
+      .menu-left {
+        padding: 13px 10px 6px;
+      }
+      header > a,
+      .menu-left a {
+        padding-left: 5px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #000;
+        font-weight: medium;
+        line-height: 20px;
+        vertical-align: 13px;
+      }
+
+      .menu-nav > li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 40px;
+        font-size: 15px;
+        padding: 17px 0;
+        cursor: pointer;
+        position: relative;
+      }
+      .down-icon {
+        height: 16px;
+        width: 16px;
+        vertical-align: middle;
+      }
+      /* ------SUB MENU PRIMARY------------ */
+      .menu-nav li:hover .submenu {
+        visibility: visible;
+        transition: 0.3s ease-in-out;
+        transform: translateY(-10px);
+      }
+      .submenu {
+        z-index: 1;
+        position: absolute;
+        top: 60px;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        width: 212px;
+        visibility: hidden;
+        background-color: #fff;
+      }
+      .sbm-2 {
+        width: 146px;
+      }
+      .sbm-3 {
+        width: 180px;
+      }
+      .sbm-4 {
+        width: 165px;
+      }
+      .submenu li:hover > a,
+      .sbm-1 .active-link {
+        color: #03a9f5;
+        background: #fafafa;
+      }
+      .sbm-1 .active-link {
+        font-weight: 600;
+      }
+      .submenu li a {
+        color: #000;
+        padding: 7px 30px;
+        line-height: 22px;
+        font-size: 15px;
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+      }
+      .sbm-li {
+        position: relative;
+      }
+      .right-icon {
+        border-left: 4px solid #999;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        position: absolute;
+        right: 20px;
+
+        top: 15px;
+      }
+
+      /* ------STICKY NAVIGATION---- */
+     
+
+      .sticky-header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #f0efef;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 5%);
+      }
+      .sticky-header .menu-left {
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .zoho-icon {
+        height: 23px;
+        width: 66px;
+      }
+      .head-signup-btn {
+        display: inline-block;
+
+        font-size: 11px;
+        padding: 6px 15px;
+        line-height: 25px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        background: #f0483e;
+        letter-spacing: -0.5px;
+        border: none;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      .sticky-header .menu-nav > li {
+        margin-right: 35px;
+      }
+      .sticky-header .menu-nav > li:nth-child(7) {
+        margin-right: 0;
+      }
+      .sticky-header .menu-nav > li:last-child {
+        padding: 7px 8px 6px;
+        margin-right: 0;
+        vertical-align: top;
+      }
+      .sticky-header .menu-nav li:hover .submenu {
+        transform: translateY(-20px);
+      }
+      #header {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        transition: 200ms;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="menu">
+      <div class="menu-left">
+        <img
+          src="assets/workdrive-icon.png"
+          alt=""
+          width="44px"
+          height="44px"
+        />
+        <a href="#">WorkDrive</a>
+      </div>
+      <div class="menu-right">
+        <ul class="menu-nav">
+          <li>
+            <span>Features</span>
+            <img
+              class="down-icon"
+              src="assets/icons8-sort-down-24.png"
+              alt=""
+            />
+            <ul class="submenu sbm-1">
+              <li><a href="#">Team Folders</a></li>
+              <li><a href="#">Office Editors </a></li>
+              <li><a href="#">Smart Search</a></li>
+              <li><a href="#">Data Templates </a></li>
+              <li><a href="#">Collect Files</a></li>
+              <li><a href="#">Admin Console</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Mobile Apps </a></li>
+              <li><a href="#">WorkDrive Genie </a></li>
+              <li><a href="#">WorkDrive TrueSync </a></li>
+              <li><a href="#">WorkDrive Sync </a></li>
+              <li><a href="#">GDPR Compliance </a></li>
+              <li><a href="#">HIPAA Compliance </a></li>
+              <li><a class="active-link" href="#">All Features </a></li>
+            </ul>
+          </li>
+          <li>Pricing</li>
+          <li>
+            <span>Solutions</span>
+            <img
+              class="down-icon"
+              src="assets/icons8-sort-down-24.png"
+              alt=""
+            />
+            <ul class="submenu sbm-2">
+              <li class="sbm-li">
+                <a href="#">Function </a>
+                <span class="right-icon"></span>
+                <ul class="submenu-in sbm-in-1">
+                  <li><a href="#">Legal</a></li>
+                  <li><a href="#">Finance</a></li>
+                  <li><a href="#">Marketing</a></li>
+                  <li><a href="#">Operations</a></li>
+                  <li><a href="#">Human Resources</a></li>
+                  <li><a href="#">Research and Development</a></li>
+                </ul>
+              </li>
+              <li class="sbm-li">
+                <a href="#">Industry</a>
+                <span class="right-icon"></span>
+                <ul class="submenu-in sbm-in-2">
+                  <li><a href="#">Training</a></li>
+                  <li><a href="#">Manufacturing</a></li>
+                  <li><a href="#">Healthcare</a></li>
+                  <li><a href="#">Legal</a></li>
+                  <li><a href="#">Real Estate</a></li>
+                  <li><a href="#">IT</a></li>
+                  <li><a href="#">Telecom</a></li>
+                  <li><a href="#">Retail</a></li>
+                  <li><a href="#">Labs</a></li>
+                </ul>
+              </li>
+              <li class="sbm-li">
+                <a href="#">Size</a>
+                <span class="right-icon"></span>
+                <ul class="submenu-in sbm-in-3">
+                  <li><a href="#">Individuals</a></li>
+                  <li><a href="#">Startups</a></li>
+                  <li><a href="#">Small and Medium Businesses</a></li>
+                  <li><a href="#">EnterPrises</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Customers</li>
+          <li>
+            <span>Add-ons</span>
+            <img
+              class="down-icon"
+              src="assets/icons8-sort-down-24.png"
+              alt=""
+            />
+            <ul class="submenu sbm-3">
+              <li><a href="#">Microsoft add-on</a></li>
+              <li><a href="#">Gmail Add-on</a></li>
+              <li><a href="#">Zapier</a></li>
+            </ul>
+          </li>
+          <li>
+            <span>Resources</span>
+            <img
+              class="down-icon"
+              src="assets/icons8-sort-down-24.png"
+              alt=""
+            />
+            <ul class="submenu sbm-4">
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">User Guide</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">How-to-videos</a></li>
+              <li><a href="#">Webinar</a></li>
+              <li><a href="#">What's New</a></li>
+              <li><a href="#">Digest</a></li>
+              <li><a href="#">Developer APIs</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+    </header>
+    <div id="header">
+      <header class="sticky-header">
+        <div class="menu-left">
+          <img
+            class="zoho-icon"
+            src="assets/zoho-logo.png"
+            alt=""
+            width="44px"
+            height="44px"
+          />
+          <a style="font-weight: bold" href="#">WorkDrive</a>
+        </div>
+        <div class="menu-right">
+          <ul class="menu-nav">
+            <li>
+              <span>Features</span>
+              <img
+                class="down-icon"
+                src="assets/icons8-sort-down-24.png"
+                alt=""
+              />
+              <ul class="submenu sbm-1">
+                <li><a href="#">Team Folders</a></li>
+                <li><a href="#">Office Editors </a></li>
+                <li><a href="#">Smart Search</a></li>
+                <li><a href="#">Data Templates </a></li>
+                <li><a href="#">Collect Files</a></li>
+                <li><a href="#">Admin Console</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Mobile Apps </a></li>
+                <li><a href="#">WorkDrive Genie </a></li>
+                <li><a href="#">WorkDrive TrueSync </a></li>
+                <li><a href="#">WorkDrive Sync </a></li>
+                <li><a href="#">GDPR Compliance </a></li>
+                <li><a href="#">HIPAA Compliance </a></li>
+                <li><a class="active-link" href="#">All Features </a></li>
+              </ul>
+            </li>
+            <li>Pricing</li>
+            <li>
+              <span>Solutions</span>
+              <img
+                class="down-icon"
+                src="assets/icons8-sort-down-24.png"
+                alt=""
+              />
+              <ul class="submenu sbm-2">
+                <li class="sbm-li">
+                  <a href="#">Function </a>
+                  <span class="right-icon"></span>
+                  <ul class="submenu-in sbm-in-1">
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Finance</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Operations</a></li>
+                    <li><a href="#">Human Resources</a></li>
+                    <li><a href="#">Research and Development</a></li>
+                  </ul>
+                </li>
+                <li class="sbm-li">
+                  <a href="#">Industry</a>
+                  <span class="right-icon"></span>
+                  <ul class="submenu-in sbm-in-2">
+                    <li><a href="#">Training</a></li>
+                    <li><a href="#">Manufacturing</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Real Estate</a></li>
+                    <li><a href="#">IT</a></li>
+                    <li><a href="#">Telecom</a></li>
+                    <li><a href="#">Retail</a></li>
+                    <li><a href="#">Labs</a></li>
+                  </ul>
+                </li>
+                <li class="sbm-li">
+                  <a href="#">Size</a>
+                  <span class="right-icon"></span>
+                  <ul class="submenu-in sbm-in-3">
+                    <li><a href="#">Individuals</a></li>
+                    <li><a href="#">Startups</a></li>
+                    <li><a href="#">Small and Medium Businesses</a></li>
+                    <li><a href="#">EnterPrises</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Customers</li>
+            <li>
+              <span>Add-ons</span>
+              <img
+                class="down-icon"
+                src="assets/icons8-sort-down-24.png"
+                alt=""
+              />
+              <ul class="submenu sbm-3">
+                <li><a href="#">Microsoft add-on</a></li>
+                <li><a href="#">Gmail Add-on</a></li>
+                <li><a href="#">Zapier</a></li>
+              </ul>
+            </li>
+            <li>
+              <span>Resources</span>
+              <img
+                class="down-icon"
+                src="assets/icons8-sort-down-24.png"
+                alt=""
+              />
+              <ul class="submenu sbm-4">
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">User Guide</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">How-to-videos</a></li>
+                <li><a href="#">Webinar</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Digest</a></li>
+                <li><a href="#">Developer APIs</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </li>
+            <li>Contact Us</li>
+            <li><a class="head-signup-btn" href="#">Get Started</a></li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    <br /><br /><br /><br />
+    <section>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+        autem vitae, quisquam mollitia aliquam fuga asperiores odit quibusdam
+        harum dolores distinctio repudiandae animi sit aperiam voluptatum
+        accusamus facilis vel minus. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Aspernatur odit, fuga dolore doloribus suscipit vel
+        modi nobis delectus deleniti rem consectetur itaque similique, ut
+        facilis! Vitae dicta quos praesentium omnis.
+      </p>
+      <br /><br /><br /><br />
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+        autem vitae, quisquam mollitia aliquam fuga asperiores odit quibusdam
+        harum dolores distinctio repudiandae animi sit aperiam voluptatum
+        accusamus facilis vel minus. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Aspernatur odit, fuga dolore doloribus suscipit vel
+        modi nobis delectus deleniti rem consectetur itaque similique, ut
+        facilis! Vitae dicta quos praesentium omnis.
+      </p>
+      <br /><br /><br /><br />
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+        autem vitae, quisquam mollitia aliquam fuga asperiores odit quibusdam
+        harum dolores distinctio repudiandae animi sit aperiam voluptatum
+        accusamus facilis vel minus. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Aspernatur odit, fuga dolore doloribus suscipit vel
+        modi nobis delectus deleniti rem consectetur itaque similique, ut
+        facilis! Vitae dicta quos praesentium omnis.
+      </p>
+      <br /><br /><br /><br />
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+        autem vitae, quisquam mollitia aliquam fuga asperiores odit quibusdam
+        harum dolores distinctio repudiandae animi sit aperiam voluptatum
+        accusamus facilis vel minus. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Aspernatur odit, fuga dolore doloribus suscipit vel
+        modi nobis delectus deleniti rem consectetur itaque similique, ut
+        facilis! Vitae dicta quos praesentium omnis.
+      </p>
+      <br /><br /><br /><br />
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+        autem vitae, quisquam mollitia aliquam fuga asperiores odit quibusdam
+        harum dolores distinctio repudiandae animi sit aperiam voluptatum
+        accusamus facilis vel minus. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Aspernatur odit, fuga dolore doloribus suscipit vel
+        modi nobis delectus deleniti rem consectetur itaque similique, ut
+        facilis! Vitae dicta quos praesentium omnis.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+        autem vitae, quisquam mollitia aliquam fuga asperiores odit quibusdam
+        harum dolores distinctio repudiandae animi sit aperiam voluptatum
+        accusamus facilis vel minus. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Aspernatur odit, fuga dolore doloribus suscipit vel
+        modi nobis delectus deleniti rem consectetur itaque similique, ut
+        facilis! Vitae dicta quos praesentium omnis.
+      </p>
+      <br /><br /><br /><br />
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+        autem vitae, quisquam mollitia aliquam fuga asperiores odit quibusdam
+        harum dolores distinctio repudiandae animi sit aperiam voluptatum
+        accusamus facilis vel minus. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Aspernatur odit, fuga dolore doloribus suscipit vel
+        modi nobis delectus deleniti rem consectetur itaque similique, ut
+        facilis! Vitae dicta quos praesentium omnis.
+      </p>
+      <br /><br /><br /><br />
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+        autem vitae, quisquam mollitia aliquam fuga asperiores odit quibusdam
+        harum dolores distinctio repudiandae animi sit aperiam voluptatum
+        accusamus facilis vel minus. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Aspernatur odit, fuga dolore doloribus suscipit vel
+        modi nobis delectus deleniti rem consectetur itaque similique, ut
+        facilis! Vitae dicta quos praesentium omnis.
+      </p>
+    </section>
+    <script>
+      window.addEventListener("scroll", () => {
+        var header = document.getElementById("header");
+        var curScroll = window.pageYOffset;
+        // console.log(curScroll);
+        if (curScroll >= 200) {
+          header.style.display = "block";
+        } else {
+          header.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

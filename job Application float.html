@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application form</title>
+    <link rel="stylesheet" href="job Application float.css" />
+    <script src="jobApplication.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>Job Application</h2>
+      </header>
+      <div class="main-container">
+        <h2 class="h2">Personal Information</h2>
+        <form id="form" action="#">
+          <div class="fullname clear-fix">
+            <div class="fullname-label">
+              <label>Full name <span>*</span></label>
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="firstname"
+                placeholder="First"
+                required
+              />
+
+              <input type="text" name="lastname" placeholder="Last" required />
+            </div>
+          </div>
+          <div class="fullname date">
+            <div class="fullname-label">
+              <label>Date of Birth <span>*</span> </label>
+            </div>
+
+            <div>
+              <input type="date" name="DOB" id="DOB" />
+            </div>
+          </div>
+          <div class="fullname gender">
+            <div class="fullname-label">
+              <label>Gender <span>*</span> </label>
+            </div>
+
+            <div class="gender-input">
+              <input type="radio" name="gender" value="male" id="gen" /><label
+                for="gen"
+              >
+                Male</label
+              >
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                id="gen1"
+              /><label for="gen1"> Female</label>
+            </div>
+          </div>
+          <div class="fullname education">
+            <div class="fullname-label">
+              <label>Education </label>
+            </div>
+
+            <div>
+              <select name="Education">
+                <option value=""><label>-Select-</label></option>
+                <option value="BE">BE</option>
+                <option value="BSC">BSC</option>
+                <option value="BCA">BCA</option>
+              </select>
+            </div>
+          </div>
+          <div class="fullname resume">
+            <div class="fullname-label">
+              <label>Resume <span>*</span></label>
+            </div>
+
+            <div class="fullname-input">
+              <input type="file" name="resume" />
+            </div>
+          </div>
+          <div class="fullname address">
+            <div class="fullname-label">
+              <label>Address </label>
+            </div>
+
+            <div class="address-input">
+              <input type="text" name="House No" placeholder="Street Address" />
+              <input
+                type="text"
+                name="Street Address"
+                placeholder="Address Line 2"
+              />
+
+              <input type="text" name="City" placeholder="City" />
+              <input
+                type="text"
+                name="State"
+                placeholder="State / Region / Province"
+              />
+
+              <input
+                type="text"
+                name="Postal"
+                placeholder="Postal / Zip Code"
+              />
+              <select>
+                <option value=""><label>-Country-</label></option>
+                <option name="Nationality" value="Indian">Indian</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="fullname date">
+            <div class="fullname-label">
+              <label>Email <span>*</span> </label>
+            </div>
+
+            <div>
+              <input type="email" required name="userEmail" />
+            </div>
+          </div>
+          <div class="fullname date">
+            <div class="fullname-label">
+              <label>Phone </label>
+            </div>
+
+            <div>
+              <input type="tel" name="phone NO" />
+            </div>
+          </div>
+          <div class="fullname date">
+            <div class="fullname-label">
+              <label>Leisure interests </label>
+            </div>
+
+            <div>
+              <textarea name="interests"></textarea>
+            </div>
+          </div>
+          <h2 class="h2">Previous/Current Employment Details</h2>
+          <div class="fullname clear-fix date">
+            <div class="fullname-label">
+              <label>Company name </label>
+            </div>
+
+            <div>
+              <input type="text" name="Company Name:" />
+            </div>
+          </div>
+          <div class="fullname date">
+            <div class="fullname-label">
+              <label>Date of joining </label>
+            </div>
+
+            <div>
+              <input type="date" name="Date of Joining" />
+            </div>
+          </div>
+          <div class="fullname date">
+            <div class="fullname-label">
+              <label>Date of leaving</label>
+            </div>
+
+            <div>
+              <input type="date" name="Date of leaving" />
+            </div>
+          </div>
+          <div class="fullname date">
+            <div class="fullname-label">
+              <label>Designation </label>
+            </div>
+
+            <div>
+              <input type="text" name="Designation" />
+            </div>
+          </div>
+          <h2 class="h2">Reference #1</h2>
+          <div class="fullname clear-fix">
+            <div class="fullname-label">
+              <label>Full name <span>*</span></label>
+            </div>
+
+            <div>
+              <input type="text" placeholder="First" name="ref1 firstname" />
+
+              <input type="text" placeholder="Last" name="ref1 firstname" />
+            </div>
+          </div>
+          <div class="fullname date">
+            <div class="fullname-label">
+              <label>Email <span>*</span> </label>
+            </div>
+
+            <div>
+              <input type="email" name="ref1 Email" />
+            </div>
+          </div>
+          <div class="fullname date">
+            <div class="fullname-label">
+              <label>Phone </label>
+            </div>
+
+            <div>
+              <input type="tel" name="ref1 phoneNo" />
+            </div>
+          </div>
+          <h2 class="h2">Reference #2</h2>
+          <div class="fullname clear-fix">
+            <div class="fullname-label">
+              <label>Full name <span>*</span></label>
+            </div>
+
+            <div>
+              <input type="text" placeholder="First" name="ref2 firstname" />
+
+              <input type="text" placeholder="Last" name="ref2 lastname" />
+            </div>
+          </div>
+          <div class="fullname date">
+            <div class="fullname-label">
+              <label>Email <span>*</span> </label>
+            </div>
+
+            <div>
+              <input type="email" required name="ref2 Email" />
+            </div>
+          </div>
+          <div class="fullname date">
+            <div class="fullname-label">
+              <label>Phone </label>
+            </div>
+
+            <div>
+              <input type="tel" name="ref2 phoneNo" />
+            </div>
+          </div>
+          <footer>
+            <button onclick="doSubmit()" type="submit">Apply</button>
+          </footer>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

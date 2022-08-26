@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.container {
+  padding: 20px;
+  margin: 20px;
+  margin-bottom: 0px;
+}
+header {
+  padding: 25px;
+  text-align: center;
+  color: #252525;
+  font-family: "Open Sans", Arial, Arimo, Helvetica, sans-serif;
+  font-style: normal;
+  padding-bottom: 33px;
+  border-bottom: 6px solid black;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 100;
+}
+h4 {
+  font-weight: 100;
+}
+body {
+  width: 800px;
+  /* border: 1px solid #888a88; */
+  margin-bottom: 15px;
+}
+.container-left {
+  float: left;
+  height: 310px;
+  width: 220px;
+  /* margin-top: 13px;
+        padding: 10px; */
+}
+/* label {
+  display: block;
+  padding-top: 32px;
+  padding-left: 10px;
+
+  font-size: medium;
+  font-style: normal;
+  font-family: "Open Sans", Arial, Arimo, Helvetica, sans-serif;
+  font-size: 15px;
+  margin-left: 0;
+
+  color: #252525;
+  font-weight: medium;
+} */
+.container-right {
+  float: left;
+  margin-top: 5px;
+  padding-left: 25px;
+}
+/* textarea,
+input {
+  padding: 7px;
+  margin-top: 25px;
+  width: 164px;
+  height: 35px;
+  border: 1px solid #b2c5c0;
+  border-radius: 5px;
+} */
+.input-3 {
+  width: 223px;
+}
+textarea {
+  width: 335px;
+  height: 75px;
+}
+footer {
+  clear: both;
+  text-align: center;
+  padding: 25px;
+}
+button {
+  color: #fff;
+  border: none;
+  background-color: #ef473e;
+  padding: 6px 24px;
+  font: 400 16px "Open Sans", Arial, Arimo, Helvetica, sans-serif;
+  cursor: pointer;
+}

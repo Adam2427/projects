@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+      }
+      .fade-img {
+        position: relative;
+      }
+      /* img {
+        animation: image 5s 1s;
+      } */
+
+      /* @keyframes image {
+        0% {
+        }
+        25% {
+          opacity: 0.9;
+        }
+        50% {
+          opacity: 0.9;
+        }
+        75% {
+          opacity: 0.9;
+        }
+
+        100% {
+          opacity: 1;
+        }} */
+
+      .fade-img::before {
+        content: " ";
+        height: 136px;
+        width: 188px;
+        transition: 1s;
+        position: absolute;
+        background-color: #c4c4c4;
+        transform-origin: bottom;
+        animation: fade 5s 1s;
+        animation-fill-mode: forwards;
+      }
+      @keyframes fade {
+        0% {
+          /* transform: rotateX(85deg); */
+          transform: scaleY(0.2);
+        }
+        25% {
+          opacity: 0.9;
+        }
+        50% {
+          opacity: 0.9;
+        }
+        75% {
+          opacity: 0.9;
+        }
+
+        100% {
+          opacity: 0;
+          transform: scaleY(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="fade-img"><img src="Music/syncimg3.jpg" alt="" /></div>
+  </body>
+</html>
+<!-- .sync {
+  height: 15px;
+  top: 69px;
+  left: 41px;
+  background: white;
+
+  animation: sync 3s linear;
+  animation-fill-mode: forwards;
+  visibility: visible;
+  position: absolute;
+}
+@keyframes sync {
+  from {
+    transform: rotateZ(1000deg);
+  }
+  to {
+    visibility: hidden;
+  }
+}
+.market-cont-1 {
+  position: relative;
+}
+
+.syncing {
+  margin-left: 10px;
+  font-size: 25px;
+  vertical-align: top;
+  animation: syncing;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+@keyframes syncing {
+  /* from {
+    visibility: visible;
+  } */
+  100% {
+    visibility: hidden;
+  }
+}
+
+.synced {
+  font-size: 25px;
+  color: #018d01;
+  float: right;
+  margin-right: 60px;
+  vertical-align: top;
+  animation: synced;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+@keyframes synced {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+/* Grid image Fade */
+.fade-cont {
+  position: relative;
+}
+
+.fade-box {
+  content: " ";
+  height: 82px;
+  width: 108px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #b1adad;
+  transform-origin: bottom;
+  animation: fade-box 5s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-box {
+  0% {
+    transform: rotateX(85deg);
+    /* transform: scaleY(0.2); */
+  }
+  25% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  75% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+}
+.grid-img {
+  animation: gridimg 4s forwards linear;
+  opacity: 0.5;
+}
+@keyframes gridimg {
+  /* 0% {
+    opacity: 0.5;
+  } */
+  100% {
+    opacity: 1;
+  }
+}
+.fade-box-1 {
+  animation-duration: 5s;
+}
+.fade-box-1 {
+  animation-duration: 6s;
+} -->
